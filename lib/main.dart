@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
+import 'form_screen.dart';
 import 'text_search_screen.dart';
 
 void main() {
@@ -37,7 +38,14 @@ class App extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).push(TextSearchScreen.route());
               },
-            )
+            ),
+            ListTile(
+              title: Text('Form'),
+              trailing: Icon(Icons.arrow_forward_ios),
+              onTap: () {
+                Navigator.of(context).push(FormScreen.route());
+              },
+            ),
           ],
         )
       ),
